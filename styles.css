@@ -1,0 +1,35 @@
+/* Reset básico */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li{
+    font-size:x-large;    
+    font-style: italic;
+}
+
+.clock_container {
+    text-align: justify;
+}
+
+.clock {
+    font-size: 5rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.description {
+    text-align: justify;
+    font-size: 3.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
