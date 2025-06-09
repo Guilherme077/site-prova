@@ -6,58 +6,103 @@
     <title>Aplicação de Prova</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="clock_icon.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <div>
-            <div class="br_clock">
-                <h1>H. Brasília: </h1>
-                <h1 id="clock" class="clock"></h1>
-            </div>
-            <div class="br_clock">
-                <h1>Temporizador:  </h1>
-                <h1 id="timer" class="timer"></h1>
-            </div>
-            <div>
-                <div class="flex">
-                    <div>
-                        <h1 for="time">Defina o Horário de Término da Prova</h1>
-                        <input type="time" id="endTime" class="time-input">
-                        <button id="startTimer" class="start-button">Iniciar Temporizador</button>
+    <div class="background-animation"></div>
+    
+    <header class="header">
+        <div class="header-content">
+            <i class="fas fa-clock header-icon"></i>
+            <h1 class="header-title">Sistema de Aplicação de Prova</h1>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <!-- Seção do Relógio e Timer -->
+        <section class="timer-section">
+            <div class="timer-card">
+                <div class="time-display">
+                    <div class="time-item">
+                        <i class="fas fa-globe-americas"></i>
+                        <div class="time-content">
+                            <span class="time-label">Horário de Brasília</span>
+                            <span id="clock" class="time-value"></span>
+                        </div>
+                    </div>
+                    <div class="time-item">
+                        <i class="fas fa-hourglass-half"></i>
+                        <div class="time-content">
+                            <span class="time-label">Tempo Restante</span>
+                            <span id="timer" class="time-value timer-value">--:--:--</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timer-controls" id="timerControls">
+                    <div class="input-group">
+                        <label for="endTime" class="input-label">
+                            <i class="fas fa-clock"></i>
+                            Defina o Horário de Término da Prova
+                        </label>
+                        <input type="time" id="endTime" class="time-input" required>
+                        <button id="startTimer" class="start-button">
+                            <i class="fas fa-play"></i>
+                            Iniciar Temporizador
+                        </button>
                     </div>
                 </div>
             </div>
-        </div>
-    
-        <div>
-            <h1>Permitido</h1>
-            <ul>
-                <li>Utilizar e portar uma caneta azul ou preta.</li>
-                <li>Caso seja necessário será permitido rascunho.</li>
-                <li>Garrafa com rótulo trasparente</li>
-            </ul>
-        </div>
-        <div>
-            <h1>Não é Permitido </h1>
-            <ul>
-                <li>Utilizar ou portar celular durante a avaliação.</li>
-                <li>Utilizar ou portar calculadora.</li>
-                <li>Interagir com outros colegas.</li>
-                <li>Ligar ou utilizar o PC (Caso a prova seja aplicada em lab)</li>
-            </ul>
-        </div>
-        <div>
-            <h1>Durante a Prova</h1>
-            <ul>
-                <li>A interpretação da prova faz parte da prova.</li>
-                <li>O aplicador não deverá fornecer ajuda.</li>
-                <li>Brilho do Chromebook deve estar no máximo.</li>
-                <li>O modo tela cheia deve estar ativo.</li>
-                <li>Caso alguma fórmula ou recomendação seja necessária será colocada no quadro.</li>
+        </section>
 
-            </ul>
-        </div>
-    </div>
-<script src="script.js"></script>
+        <!-- Seção de Regras -->
+        <section class="rules-section">
+            <div class="rules-grid">
+                <div class="rule-card allowed">
+                    <div class="rule-header">
+                        <i class="fas fa-check-circle"></i>
+                        <h2>Permitido</h2>
+                    </div>
+                    <ul class="rule-list">
+                        <li><i class="fas fa-pen"></i> Utilizar e portar uma caneta azul ou preta</li>
+                        <li><i class="fas fa-file-alt"></i> Caso seja necessário será permitido rascunho</li>
+                    </ul>
+                </div>
+
+                <div class="rule-card forbidden">
+                    <div class="rule-header">
+                        <i class="fas fa-times-circle"></i>
+                        <h2>Não é Permitido</h2>
+                    </div>
+                    <ul class="rule-list">
+                        <li><i class="fas fa-mobile-alt"></i> Utilizar ou portar celular durante a avaliação</li>
+                        <li><i class="fas fa-calculator"></i> Utilizar ou portar calculadora</li>
+                        <li><i class="fas fa-comments"></i> Interagir com outros colegas</li>
+                    </ul>
+                </div>
+
+                <div class="rule-card instructions">
+                    <div class="rule-header">
+                        <i class="fas fa-info-circle"></i>
+                        <h2>Durante a Prova</h2>
+                    </div>
+                    <ul class="rule-list">
+                        <li><i class="fas fa-brain"></i> A interpretação da prova faz parte da prova</li>
+                        <li><i class="fas fa-user-slash"></i> O aplicador não deverá fornecer ajuda</li>
+                        <li><i class="fas fa-sun"></i> Brilho do Chromebook deve estar no máximo</li>
+                        <li><i class="fas fa-expand"></i> O modo tela cheia deve estar ativo</li>
+                        <li><i class="fas fa-chalkboard"></i> Caso alguma fórmula ou recomendação seja necessária será colocada no quadro</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Sistema de Aplicação de Prova. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
+
